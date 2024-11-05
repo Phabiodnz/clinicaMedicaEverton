@@ -2,21 +2,14 @@
     margin: 0;
     padding: 0;
     --header: 100px;
-    --main: calc(100vh - var(--header)*2);
-}
-
-
-header{
-    display: flex;
-    border: 2px solid red;
-    width: 100%;   
+    --footer: 75px;
+    --main: calc(100vh - (var(--header) + var(--footer)));
 }
 
 .header-container{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    border: 2px solid black;
     width: 100%;
     height: 100px;
 }
@@ -43,7 +36,6 @@ header{
     background-position: center;  
     height: var(--main);
     width: 100%;
-    border: 2px solid blue;
 }
 
 .hero-container div {
@@ -58,10 +50,30 @@ header{
     padding: 10px;
 }
 
-.hero-text{
+.hero-content{
     opacity: 1;
     text-shadow: 0.25px 0.25px black;
     text-align: justify;
+}
+
+.footer-container{
+    background-color: #002a69;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75px;
+}
+
+.footer-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75px;
+}
+
+.footer-content p{
+    font-size: 20px;
+    color: whitesmoke;
 }
 
 
