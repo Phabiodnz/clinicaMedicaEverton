@@ -1,0 +1,98 @@
+/* Resetando os estilos padrões de margin e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garante que o padding e border sejam incluídos no cálculo da largura e altura */
+}
+
+/* Estilos gerais do body */
+body {
+    font-family: Arial, sans-serif;  /* Define a fonte para o corpo da página */
+    background-color: purple;      /* Cor de fundo suave para a página */
+    color: #333;                    /* Cor do texto padrão */
+    display: flex;                   /* Ativa o modelo de layout Flexbox */
+    justify-content: center;         /* Alinha o conteúdo ao centro na horizontal */
+    align-items: center;             /* Alinha o conteúdo ao centro na vertical */
+    height: 100vh;                   /* Define a altura da tela como 100% da altura da viewport */
+    padding: 10px;                   /* Pequeno espaço nas bordas para não ficar colado */
+}
+
+/* Estilizando o contêiner do formulário */
+.container {
+    background-color: white;         /* Fundo branco para o formulário */
+    padding: 20px;                   /* Espaçamento interno do formulário */
+    border-radius: 10px;             /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave ao redor do formulário */
+    width: 100%;                     /* Largura máxima do contêiner */
+    max-width: 500px;                /* Largura máxima de 500px para não ficar muito largo */
+    text-align: center;              /* Centraliza o texto dentro do contêiner */
+}
+
+/* Estilo do título */
+h1 {
+    font-size: 2rem;                 /* Define o tamanho da fonte do título */
+    color: #333;                     /* Cor do título */
+    margin-bottom: 20px;             /* Espaçamento abaixo do título */
+}
+
+/* Estilizando as labels */
+label {
+    display: block;                  /* Faz com que cada label ocupe uma linha completa */
+    font-size: 1.1rem;               /* Tamanho da fonte das labels */
+    color: #333;                     /* Cor do texto das labels */
+    margin-bottom: 5px;              /* Espaço abaixo de cada label */
+}
+
+/* Estilizando os campos de entrada (inputs) */
+input[type="text"], 
+input[type="email"], 
+input[type="tel"] {
+    width: 100%;                     /* Faz com que o campo de entrada ocupe toda a largura disponível */
+    padding: 10px;                   /* Espaçamento interno dentro dos campos */
+    margin-bottom: 15px;             /* Espaço abaixo de cada campo */
+    border: 1px solid #ccc;          /* Cor de borda padrão */
+    border-radius: 5px;              /* Bordas arredondadas */
+    font-size: 1rem;                 /* Tamanho da fonte nos campos */
+}
+
+/* Estilo para quando os campos estão com foco (clicados) */
+input[type="text"]:focus, 
+input[type="email"]:focus, 
+input[type="tel"]:focus {
+    border-color: #007BFF;           /* Muda a cor da borda quando o campo recebe foco */
+    outline: none;                   /* Remove a borda azul padrão do navegador */
+}
+
+/* Estilizando o botão de envio */
+button {
+    background-color: #28a745;       /* Cor de fundo verde para o botão */
+    color: white;                    /* Cor do texto (branco) */
+    padding: 10px 20px;               /* Espaçamento interno do botão */
+    border: none;                    /* Remove a borda padrão */
+    border-radius: 5px;              /* Bordas arredondadas para o botão */
+    font-size: 1.1rem;                /* Tamanho da fonte do botão */
+    cursor: pointer;                 /* Define o cursor como "mãozinha" quando passar sobre o botão */
+}
+
+/* Efeito hover no botão */
+button:hover {
+    background-color: #218838;       /* Altera a cor do botão quando o mouse passa por cima */
+}
+
+/* Responsividade: Ajusta o layout para telas pequenas (como celulares) */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;               /* Diminui o padding no formulário em telas pequenas */
+        width: 90%;                   /* Faz o formulário ocupar 90% da largura da tela */
+    }
+
+    h1 {
+        font-size: 1.5rem;            /* Tamanho do título reduzido para telas pequenas */
+    }
+
+    input[type="text"], 
+    input[type="email"], 
+    input[type="tel"] {
+        font-size: 0.9rem;            /* Tamanho da fonte dos campos reduzido para telas pequenas */
+    }
+}
