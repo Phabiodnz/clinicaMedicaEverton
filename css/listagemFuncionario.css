@@ -1,0 +1,87 @@
+/* Resetando as margens e padding para evitar inconsistências */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: purple;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Container principal */
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 800px;
+    text-align: center;
+}
+
+/* Título */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Estilos da tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background-color: #007BFF;
+    color: white;
+}
+
+table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Botões de ação */
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Estilo da confirmação de exclusão */
+#confirmacao-exclusao {
+    margin-top: 20px;
+    background-color: #ffcccb;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#confirmacao-exclusao.hidden {
+    display: none;
+}

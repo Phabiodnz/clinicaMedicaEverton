@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Funcionários</title>
     
-    <!-- Caminho relativo correto para o arquivo CSS -->
+    <!-- Referência ao arquivo CSS -->
     <link rel="stylesheet" href="../../css/funcionarioStyles.css">
     <script src="js/funcionarioPage.js"></script>
 </head>
@@ -13,7 +13,7 @@
     <div class="container">
         <h1>Cadastro de Funcionários</h1>
         <form id="cadastro-funcionario" action="processar_dados.php" method="POST">
-            <label for="nome">Nome</label>
+            <label for="nome">Nome:</label>
             <input type="text" id="nome" name="nome" required>
             <br>
 
@@ -26,7 +26,12 @@
             <br>
 
             <label for="cargo">Cargo:</label>
-            <input type="text" id="cargo" name="cargo" required>
+            <!-- Campo de seleção com as opções de "Funcionário" e "Médico" -->
+            <select id="cargo" name="cargo" required>
+                <option value="">Selecione o cargo</option>
+                <option value="funcionario">Funcionário</option>
+                <option value="medico">Médico</option>
+            </select>
             <br>
 
             <button type="submit">Cadastrar</button>

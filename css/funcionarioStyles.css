@@ -46,7 +46,8 @@ label {
 /* Estilizando os campos de entrada (inputs) */
 input[type="text"], 
 input[type="email"], 
-input[type="tel"] {
+input[type="tel"],
+select {
     width: 100%;                     /* Faz com que o campo de entrada ocupe toda a largura disponível */
     padding: 10px;                   /* Espaçamento interno dentro dos campos */
     margin-bottom: 15px;             /* Espaço abaixo de cada campo */
@@ -58,7 +59,8 @@ input[type="tel"] {
 /* Estilo para quando os campos estão com foco (clicados) */
 input[type="text"]:focus, 
 input[type="email"]:focus, 
-input[type="tel"]:focus {
+input[type="tel"]:focus,
+select:focus {
     border-color: #007BFF;           /* Muda a cor da borda quando o campo recebe foco */
     outline: none;                   /* Remove a borda azul padrão do navegador */
 }
@@ -79,6 +81,17 @@ button:hover {
     background-color: #218838;       /* Altera a cor do botão quando o mouse passa por cima */
 }
 
+/* Estilo para o select */
+select {
+    -webkit-appearance: none;         /* Remove a seta padrão do select no Chrome/Safari */
+    -moz-appearance: none;            /* Remove a seta padrão no Firefox */
+    appearance: none;                 /* Remove a seta padrão no navegador */
+    background-color: #fff;           /* Cor de fundo branca para o select */
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="8" height="5" viewBox="0 0 8 5"%3E%3Cpath d="M4 5L0 0h8z" fill="%23333"%3E%3C/path%3E%3C/svg%3E'); /* Uma seta personalizada */
+    background-repeat: no-repeat;     /* Evita que a seta seja repetida */
+    background-position: right 10px center; /* Posiciona a seta à direita */
+}
+
 /* Responsividade: Ajusta o layout para telas pequenas (como celulares) */
 @media (max-width: 600px) {
     .container {
@@ -92,7 +105,12 @@ button:hover {
 
     input[type="text"], 
     input[type="email"], 
-    input[type="tel"] {
+    input[type="tel"],
+    select {
         font-size: 0.9rem;            /* Tamanho da fonte dos campos reduzido para telas pequenas */
+    }
+
+    button {
+        font-size: 1rem;              /* Ajusta o tamanho da fonte do botão para telas pequenas */
     }
 }

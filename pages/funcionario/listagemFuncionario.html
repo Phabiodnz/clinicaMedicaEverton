@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listagem de Funcionários</title>
+    
+    <link rel="stylesheet" href="../../css/listagemFuncionario.css">
+    <script src="js/listagemFuncionario.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Listagem de Funcionários</h1>
+
+        <!-- Tabela para exibir a lista de funcionários -->
+        <table id="tabela-funcionarios">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Cargo</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Os dados serão inseridos aqui dinamicamente com JavaScript -->
+            </tbody>
+        </table>
+
+        <!-- Seção para confirmar exclusão -->
+        <div id="confirmacao-exclusao" class="hidden">
+            <p>Tem certeza que deseja excluir este funcionário?</p>
+            <button id="confirmar-exclusao">Sim</button>
+            <button id="cancelar-exclusao">Cancelar</button>
+        </div>
+    </div>
+</body>
+</html>
