@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Especialidades - Clínica Médica</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-5">
+    <h1 class="mb-4">Cadastro de Especialidades</h1>
+    <form id="cadastroEspecialidadeForm">
+        <div class="form-group">
+            <label for="nomeEspecialidade">Nome da Especialidade</label>
+            <input type="text" class="form-control" id="nomeEspecialidade" name="nomeEspecialidade" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Cadastrar</button>
+    </form>
+    <div id="mensagem" class="mt-4"></div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#cadastroEspecialidadeForm').on('submit', function(event) {
+            event.preventDefault(); // Impede o envio do formulário
+
+            let nomeEspecialidade = $('#nomeEspecialidade').val();
+
+            if (nomeEspecialidade === "") {
+                alert("O campo Nome da Especialidade é obrigatório!");
+            } else {
+                // Limpa o formulário
+                $(this)[0].reset();
+                // Exibe mensagem de sucesso
+                $('#mensagem').html('<div class="alert alert-success" role="alert">Especialidade cadastrada com sucesso!</div>');
+            }
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listagem de Especialidades - Clínica Médica</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .table {
+            background-color: #fff;
+        }
+
+        .table th {
+            background-color: #007bff;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<div class="container mt-5">
+    <h1 class="mb-4">Listagem de Especialidades</h1>
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>Nome da Especialidade</th>
+        </tr>
+        </thead>
+        <tbody id="especialidadesTableBody">
+        <!-- As especialidades serão adicionadas aqui -->
+        </tbody>
+    </table>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const especialidades = [
+            "Cardiologia",
+            "Dermatologia",
+            "Pediatria",
+            "Ortopedia",
+            "Neurologia"
+        ];
+
+        const tableBody = document.getElementById('especialidadesTableBody');
+        especialidades.forEach(especialidade => {
+            const row = document.createElement('tr');
+            const cell = document.createElement('td');
+            cell.textContent = especialidade;
+            row.appendChild(cell);
+            tableBody.appendChild(row);
+        });
+    });
+</script>
+</body>
+</html>
