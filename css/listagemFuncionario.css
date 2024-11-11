@@ -8,7 +8,7 @@
 /* Estilos gerais */
 body {
     font-family: Arial, sans-serif;
-    background-color: purple;
+    background-color: gray;
     display: flex;
     justify-content: center;
     height: 100vh;
@@ -46,7 +46,7 @@ table th, table td {
 }
 
 table th {
-    background-color: #007BFF;
+    background-color: gray;
     color: white;
 }
 

@@ -1,0 +1,44 @@
+/* Estilo geral para o corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f6;
+}
+
+/* Estilizando o contêiner */
+.container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin-top: 50px;
+}
+
+/* Estilizando o título */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Estilo para os botões de ação */
+.btn-sm {
+    margin-right: 5px;
+}
+
+/* Ajustando a tabela */
+table {
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Estilizando as células da tabela */
+th, td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* Estilo para a linha da tabela ao passar o mouse */
+table tbody tr:hover {
+    background-color: #f8f9fa;
+}

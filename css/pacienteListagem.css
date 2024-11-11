@@ -1,0 +1,21 @@
+/* Estilo para os botões de ação */
+.btn-sm {
+    margin-right: 5px;
+}
+
+/* Ajustando a tabela */
+table {
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Estilizando as células da tabela */
+th, td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* Estilo para a linha da tabela ao passar o mouse */
+table tbody tr:hover {
+    background-color: #f8f9fa;
+}

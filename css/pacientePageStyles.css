@@ -1,0 +1,39 @@
+/* Estilos gerais do body */
+body {
+    background-color: #f8f9fa; /* Cor de fundo suave */
+}
+
+/* Contêiner do formulário */
+.container {
+    background-color: white;       /* Fundo branco para o formulário */
+    padding: 30px;                 /* Espaçamento interno */
+    border-radius: 10px;           /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave ao redor do formulário */
+}
+
+/* Estilo do título */
+h1 {
+    color: #333;                   /* Cor do título */
+    font-size: 2rem;               /* Tamanho do título */
+}
+
+/* Estilizando o botão */
+button {
+    font-size: 1.1rem;
+    padding: 10px 20px;
+}
+
+button:hover {
+    background-color: #218838; /* Cor ao passar o mouse */
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 600px) {
+    .row .col-sm-3 {
+        text-align: left;           /* Alinhamento da label à esquerda em telas pequenas */
+    }
+
+    .row .col-sm-9 {
+        width: 100%;                /* Campos ocupam toda a largura disponível */
+    }
+}
