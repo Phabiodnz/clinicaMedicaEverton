@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento de Consulta</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">Agendamento de Consulta</h1>
+        <form id="agendamentoForm">
+            <div class="form-group">
+                <label for="nomePaciente">Nome do Paciente</label>
+                <input type="text" class="form-control" id="nomePaciente" name="nomePaciente" required>
+            </div>
+            <div class="form-group">
+                <label for="dataConsulta">Data da Consulta</label>
+                <input type="date" class="form-control" id="dataConsulta" name="dataConsulta" required>
+            </div>
+            <div class="form-group">
+                <label for="horaConsulta">Hora da Consulta</label>
+                <input type="time" class="form-control" id="horaConsulta" name="horaConsulta" required>
+            </div>
+            <div class="form-group">
+                <label for="medicoResponsavel">Médico Responsável</label>
+                <input type="text" class="form-control" id="medicoResponsavel" name="medicoResponsavel" required>
+            </div>
+            <div class="form-group">
+                <label for="observacoes">Observações</label>
+                <textarea class="form-control" id="observacoes" name="observacoes" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Agendar Consulta</button>
+        </form>
+        <div id="mensagemAgendamento" class="mt-4"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#agendamentoForm').on('submit', function(event) {
+                event.preventDefault(); // Impede o envio do formulário
+
+                let nomePaciente = $('#nomePaciente').val();
+                let dataConsulta = $('#dataConsulta').val();
+                let horaConsulta = $('#horaConsulta').val();
+                let medicoResponsavel = $('#medicoResponsavel').val();
+                let observacoes = $('#observacoes').val();
+
+                if (nomePaciente === "" || dataConsulta === "" || horaConsulta === "" || medicoResponsavel === "") {
+                    alert("Todos os campos obrigatórios devem ser preenchidos!");
+                } else {
+                    // Limpa o formulário
+                    $(this)[0].reset();
+                    // Exibe mensagem de sucesso
+                    $('#mensagemAgendamento').html('<div class="alert alert-success" role="alert">Consulta agendada com sucesso!</div>');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
